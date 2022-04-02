@@ -10,15 +10,9 @@ import java.sql.*;
 public class JDBCUtil {
 
     private static String driver="com.mysql.jdbc.Driver";
-//    private static String url = "jdbc:MySQL://localhost:3306/demo";
-//    private static String user = "root";
-//    private static String password = "root";
-
-    private static String url = "jdbc:MySQL://sh-cdb-dgkoda68.sql.tencentcdb.com:58906/joinf_trade";
+    private static String url = "jdbc:MySQL://localhost:3306/demo";
     private static String user = "root";
-    private static String password = "Peat-blood-Sofia-driven-Baton6";
-
-
+    private static String password = "root";
 
     static {
         try {
