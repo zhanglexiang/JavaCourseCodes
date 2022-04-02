@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ com.xiang.config.StudentConfig,\
+ com.xiang.config.KlassConfig,\
+ com.xiang.config.SchoolConfig
