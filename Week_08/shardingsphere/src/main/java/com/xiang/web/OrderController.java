@@ -3,7 +3,11 @@ package com.xiang.web;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.xiang.entity.Order;
 import com.xiang.mapper.OrderMapper;
+import org.apache.shardingsphere.transaction.annotation.ShardingSphereTransactionType;
+import org.apache.shardingsphere.transaction.core.TransactionType;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,5 +30,18 @@ public class OrderController {
         queryWrapper.eq("user_id", userId);
         return orderMapper.selectList(queryWrapper);
     }
+
+    @Transactional
+    @ShardingSphereTransactionType(TransactionType.XA)  // 支持TransactionType.LOCAL, TransactionType.XA, TransactionType.BASE
+    @PostMapping("/order")
+    public void saveOrder() {
+
+        orderMapper.insert(Order.builder().code("D000100").userId(1L).build());
+
+        orderMapper.insert(Order.builder().code("D000101").userId(2L).build());
+
+
+    }
+
 
 }

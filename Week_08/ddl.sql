@@ -270,3 +270,10 @@ create table s_order_15
     discount         decimal(12, 2)                      null comment '折扣',
     final_sum        decimal(12, 2)                      null comment '实付金额',
 )  comment '订单表' charset = utf8;
+
+
+insert into ds1.s_order_5(code, user_id) value ("D000001", 1);
+insert into ds1.s_order_1(code, user_id) value ("D000002", 1);
+
+insert into ds0.s_order_5(code, user_id) value ("D000003", 2);
+insert into ds0.s_order_1(code, user_id) value ("D000004", 2);
