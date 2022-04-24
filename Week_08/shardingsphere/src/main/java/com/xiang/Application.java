@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @Slf4j
-@MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")
+@MapperScan("com.xiang.mapper")
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class Application {
 
