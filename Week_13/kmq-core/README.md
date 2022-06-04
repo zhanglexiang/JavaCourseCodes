@@ -1,0 +1,2 @@
+1.Kmq对象中将queue改成了固定长度的数组
+2.在Kmq对象中定义了offset记录消费的offset, commitOffset记录提交的offset
